@@ -15,9 +15,18 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-.swiper-button-next ,.swiper-button-prev{
+.swiper-button-prev{
   color: #FF7E5A !important;
-  font-size: xx-small;
+  left: 110px !important;
+}
+.swiper-button-next {
+  color: #FF7E5A !important;
+  right: 110px !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 25px !important; /* Set the desired font size for the arrow icons */
 }
 .bg-primary{
  background: #FEE7C4;
