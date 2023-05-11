@@ -25,7 +25,17 @@
 .bg-primary-200{
   background: #F09A82;
  }
+.bg-scondary{
+  background: #FEF5F2;
+ }
+ .button-primary{
+  background: #FCE6DF;
+  padding: 5px; 
+  border-radius: 99px;
+  border: solid 0.2px #CFACA1;
+ }
  .text-primary-200{
   color: #F09A82;
  }
+
 
