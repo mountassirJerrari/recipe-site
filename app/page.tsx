@@ -18,7 +18,12 @@ export default function Home() {
        <Categories className="mt-5"/>
        <Collections className="mt-5"/>
        <TopRatedRecipes className="mt-5"/>
+       <div className="mt-5">
+        
+        <img src="/img/ads1.png" alt="" />
+       </div>
       </div>
+
     </div>
   )
 }

@@ -34,6 +34,9 @@
 .bg-primary-200{
   background: #F09A82;
  }
+ .bg-primary-300{
+  background: #FF7E5A;
+ }
 .bg-scondary{
   background: #FEF5F2;
  }
@@ -45,6 +48,9 @@
  }
  .text-primary-200{
   color: #F09A82;
+ }
+ .h-screen-80{
+  height: 85vh;
  }
 
 
