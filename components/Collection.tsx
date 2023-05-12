@@ -9,9 +9,9 @@ interface CollectionProps extends HTMLAttributes<HTMLDivElement> {
 
 const Collection: FC<CollectionProps> = ({className ,title ,iamgeSrc}) => {
     return (
-        <div className={clsx("w-full h-72 overflow-hidden m-3 bg-scondary rounded-xl flex flex-col items-stretch",className)}>
+        <div className={clsx("w-full hover:-translate-y-1 transition-all h-72 overflow-hidden m-3 bg-scondary rounded-xl flex flex-col items-stretch",className)}>
             <div className="h-3/4 ">
-                <img className="object-cover w-full h-full" src={iamgeSrc} alt="" />
+                <img className="object-cover  w-full h-full" src={iamgeSrc} alt="" />
             </div>
             <div className="h-1/4  p-5  flex items-center justify-between ">
                 <div className=" font-bold text-xl ">{title}</div>
