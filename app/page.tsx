@@ -1,3 +1,4 @@
+"use client"
 import Categories from "@/components/Categories";
 import Collections from "@/components/Collections";
 import JoinCard from "@/components/JoinCard";
@@ -7,6 +8,7 @@ import TopRatedRecipes from "@/components/TopRatedRecipes";
 
 
 export default function Home() {
+  
   return (
     <div>
       <div className="w-full h-screen relative overflow-hidden ">

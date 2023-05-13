@@ -1,11 +1,12 @@
 "use client"
 import React, { FC, useState } from 'react';
 interface props {
-    onSearch : (query:string)=>void
+    onSearch : (query:string)=>void ; 
+    initialValue?:string
 }
 
-const SearchBar :FC<props> = ({ onSearch }) => {
-    const [query, setQuery] = useState('');
+const SearchBar :FC<props> = ({ onSearch ,initialValue }) => {
+    const [query, setQuery] = useState(initialValue||'');
 
     const handleChange = (e:any) => {
         setQuery(e.target.value);

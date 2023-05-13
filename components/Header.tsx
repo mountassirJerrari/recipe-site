@@ -32,32 +32,43 @@ import {
     MenubarTrigger,
 } from "@/components/ui/menubar"
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SearchBar from "./SearchBar";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 function Header() {
 
     const router = useRouter();
     function searchHandler(query: string) {
-        router.push('recipes/search?query='+query)
+        router.push('recipes/search?query=' + query)
 
         console.log(query);
 
     }
+    const pathname = usePathname();
+
+
+    const [isSearchBarVisible, setSearchBarVisible] = useState(true);
+
+    useEffect(() => {
+        setSearchBarVisible(!pathname.includes('/recipes/search'));
+    }, [pathname]);
 
 
 
     return (
-        <div className='h-14 z-30 w-full fixed top-0  bg-white p-5 flex justify-between items-center shadow-sm '>
+        <div className='h-14 z-30 w-full fixed top-0  bg-white p-5 flex justify-between  items-center shadow-sm '>
+
             <Link href={'/'} className="flex justify-center items-center ">
                 <img className="h-11" src="/img/logo.png" alt="Logo" />
                 <div className="text-amber-800   text-3xl font-bold ml-2 ">kouzina</div>
             </Link>
 
-            <div className="relative flex justify-center items-center w-1/4 ">
-                <SearchBar onSearch={searchHandler} />
-                <BiSearch size={22} className="absolute right-2 " /></div>
+
+            {
+                isSearchBarVisible  && (<div className="relative flex justify-center items-center w-1/4 "><SearchBar onSearch={searchHandler} /> <BiSearch size={22} className="absolute right-2 " />  </div>)
+            }
+
 
             <nav className="flex  justify-between items-center ">
                 <div> <NavigationMenu  >
