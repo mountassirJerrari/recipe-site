@@ -1,3 +1,4 @@
+"use client"
 import { BiUpArrowAlt } from "react-icons/bi";
 import { FC } from "react";
 import SocialLinks from "./SocialLinks";
@@ -7,8 +8,11 @@ interface FooterProps {
 }
 
 const Footer: FC<FooterProps> = () => {
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      };
     return (<div className=" flex  h-screen-80 flex-col items-center justify-between pb-12 w-full bg-primary-300  ">
-        <div className="bg-white -translate-y-1/2 hover:-translate-y-2/3 transition-all rounded-full"><BiUpArrowAlt size={35} color="FF7E5A" /></div>
+        <button onClick={scrollToTop} className="bg-white -translate-y-1/2 hover:-translate-y-2/3 transition-all rounded-full"><BiUpArrowAlt size={35} color="FF7E5A" /></button>
         <SocialLinks className="w-60 " color="ffffff" size={35}></SocialLinks>
         <div className="text-white w-4/5 flex mr-10 mt-10 items-start justify-between">
             <div>
