@@ -6,10 +6,10 @@ export default function AuthLayout({
     children, }: { children: React.ReactNode }) {
 
     return (
-        <div className="h-screen pt-14 h w-full  flex justify-center items-center ">
+        <div className="h-screen pt-14 h w-full bg-slate-50  flex justify-center items-center ">
 
 
-            <div className=" w-3/4 h-5/6 overflow-hidden rounded-sm shadow-xl flex items-stretch justify-stretch">
+            <div className=" w-3/4 h-5/6 overflow-hidden bg-white rounded-sm shadow-xl flex items-stretch justify-stretch">
                 <div className=" relative w-1/2  ">
                     <img className="object-contain object-top " src="/img/auth.png " alt="" />
                     <div className="font-bold text-2xl text-white absolute left-3 bottom-2">Kouzina</div>

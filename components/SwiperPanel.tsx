@@ -30,11 +30,15 @@ const SwiperPanel: FunctionComponent<Props> = ({className }) => {
       spaceBetween={50}
       slidesPerView={1}
       navigation
+      autoplay 
+      
       loop={true}
       pagination={{ clickable: true }}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
+
     >
+      
       <SwiperSlide><SwiperCard></SwiperCard></SwiperSlide>
       <SwiperSlide><SwiperCard></SwiperCard></SwiperSlide>
       <SwiperSlide><SwiperCard></SwiperCard></SwiperSlide>

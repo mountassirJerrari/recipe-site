@@ -114,16 +114,13 @@
  }
  .button-primary{
   background: #FCE6DF;
-  padding: 5px; 
+  padding: 4px; 
+  padding-left: 8px;
+  padding-right: 8px;
   border-radius: 99px;
   border: solid 0.2px #CFACA1;
  }
- .button-primary:hover{
-  background: #FCE6DF;
-  padding: 5px; 
-  border-radius: 99px;
-  border: solid 0.2px #8d746c;
- }
+ 
  .text-primary-200{
   color: #F09A82;
  }
