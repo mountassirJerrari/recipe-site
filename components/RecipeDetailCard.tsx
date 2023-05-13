@@ -1,6 +1,7 @@
 import { FC, HTMLAttributes } from "react";
 import RecipeHeaderCard from './RecipeHeaderCard';
 import RecipeInfoCard from './RecipeInfoCard';
+import IngredientCard from "./IngredientCard";
 
 interface RecipeDetailCardProps extends HTMLAttributes<HTMLDivElement>  {
     
@@ -17,17 +18,17 @@ const RecipeDetailCard: FC<RecipeDetailCardProps> = () => {
             {label: 'Servings', value: 8}
           ],
           ingredients: [
-            "1/3 cup butter",
-            "1/3 cup chopped onion",
-            "1/3 cup all-purpose flour",
-            "1/2 teaspoon salt",
-            "1/4 teaspoon ground black pepper",
-            "1 3/4 cups chicken broth",
-            "2/3 cup milk",
-            "2 cups chopped cooked chicken",
-            "1 (14.5 ounce) can peas and carrots",
-            "1/2 (15 ounce) can whole new potatoes, drained",
-            "1 (14.1 ounce) package double-crust pie pastry, thawed",
+            { label: "1/3 cup butter", img: '/img/zbda.jpg' },
+            { label: "1/3 cup chopped onion", img: '/img/bsla.jpg' },
+            { label: "1/3 cup all-purpose flour", img: '/img/t7in.jpg' },
+            { label: "1/2 teaspoon salt", img: '/img/ml7a.jpg' },
+            { label: "1/4 teaspoon ground black pepper", img: '/img/bzar.jpg' },
+            { label: "1 3/4 cups chicken broth", img: '/img/chickenbroth.jpg' },
+            { label: "2/3 cup milk", img: '/img/7lib.jpeg' },
+            { label: "2 cups chopped cooked chicken", img: '/img/djaj.jpg' },
+            { label: "1 (14.5 ounce) can peas and carrots", img: '/img/pears-carrots.jpg' },
+            { label: "1/2 (15 ounce) can whole new potatoes, drained", img: '/img/btata.jpg' },
+            { label:  "1 (14.1 ounce) package double-crust pie pastry, thawed", img: '/img/lapate.jpg' },
           ],
           nutritionFacts: [
             { label: 'Calories', value: '219.9 kcal' },
@@ -52,6 +53,11 @@ const RecipeDetailCard: FC<RecipeDetailCardProps> = () => {
             <div className="w-full">
             {recipes.map((e)=>{
                 return  <RecipeInfoCard key = {e.name} imageSrc = {e.imageSrc} nutritionfacts={e.nutritionFacts} infos={e.infos}/>
+            })}
+            </div>
+            <div className="w-full">
+            {recipes.map((e)=>{
+                return  <IngredientCard key = {e.name} ingredients = {e.ingredients}/>
             })}
             </div>
         </div>
