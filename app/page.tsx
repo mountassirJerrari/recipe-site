@@ -4,8 +4,6 @@ import JoinCard from "@/components/JoinCard";
 import SwiperPanel from "@/components/SwiperPanel";
 import TopRatedRecipes from "@/components/TopRatedRecipes";
 
-
-
 export default function Home() {
   return (
     <div>
@@ -23,7 +21,7 @@ export default function Home() {
         <img src="/img/ads1.png" alt="" />
        </div>
       </div>
+  </div>
 
-    </div>
   )
 }

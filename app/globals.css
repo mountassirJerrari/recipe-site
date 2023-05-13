@@ -53,4 +53,19 @@
   height: 85vh;
  }
 
+.bg-save{
+  background : #6b1913;
+  padding: 5px; 
+  border-radius: 99px;
+  border: hidden;
+  color: #f7e5e4;
+}
+
+.bg-other{
+  background :  #f7e5e4;
+  padding: 5px; 
+  border-radius: 99px;
+  border: hidden;
+  color:  #6b1913;
+}
 
