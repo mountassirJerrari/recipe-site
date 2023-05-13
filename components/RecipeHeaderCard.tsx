@@ -26,9 +26,9 @@ const RecipeHeaderCard: FC<RecipeHeaderCardProps> = ({ className , name }) => {
                 <Rating color="FF7E5A" size={20} /> 
             </div>
             <div className="flex flex-row font-medium pb-2 px-4 pt-2 ">
-                <button className="flex flex-row p-5 bg-save items-center mr-2"><p className="mr-2">Save</p><AiOutlineHeart size={17}/></button> 
-                <button className="flex flex-row p-5 bg-other items-center mr-2"><p className="mr-2">Rate</p><AiOutlineStar size={17}/></button>
-                <button className="flex flex-row p-5 bg-other items-center"><p className="mr-2">Share</p><AiOutlineShareAlt size={17}/></button>
+                <button className="flex flex-row bg-save items-center mr-3"><p className="mr-1.5">Save</p><AiOutlineHeart size={17}/></button> 
+                <button className="flex flex-row bg-other items-center mr-3"><p className="mr-1.5">Rate</p><AiOutlineStar size={17}/></button>
+                <button className="flex flex-row bg-other items-center mr-3"><p className="mr-1.5">Share</p><AiOutlineShareAlt size={17}/></button>
             </div>
         </div>
     );

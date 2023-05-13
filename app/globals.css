@@ -1,20 +1,86 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+ 
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+ 
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+ 
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+ 
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+ 
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+ 
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+ 
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+ 
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+ 
+    --ring: 215 20.2% 65.1%;
+ 
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+ 
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+ 
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+ 
+    --card: 224 71% 4%;
+    --card-foreground: 213 31% 91%;
+ 
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+ 
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+ 
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+ 
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+ 
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+ 
+    --ring: 216 34% 17%;
+ 
+    --radius: 0.5rem;
   }
 }
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+
 .swiper-button-prev{
   color: #FF7E5A !important;
   left: 110px !important;
@@ -37,15 +103,52 @@
  .bg-primary-300{
   background: #FF7E5A;
  }
+ .bg-primary-300-hover{
+  background: #FF7E5A;
+ }
+ .bg-primary-300-hover:hover{
+  background: #FF7E5A;
+ }
 .bg-scondary{
   background: #FEF5F2;
  }
  .button-primary{
   background: #FCE6DF;
-  padding: 5px; 
+  padding: 4px; 
+  padding-left: 8px;
+  padding-right: 8px;
   border-radius: 99px;
   border: solid 0.2px #CFACA1;
  }
+
+.bg-putput{
+  background: #e0795a;
+}
+ .bg-save{
+  background: #b81a1a;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 99px;
+  border: hidden;
+  color: #f7e8e4;
+ }
+ 
+ .bg-other{
+  background: #f7e8e4;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 99px;
+  border: hidden;
+  color: #b81a1a;
+ }
+
+.bg-facts{
+ background : #fcf7f7;
+}
  .text-primary-200{
   color: #F09A82;
  }
@@ -53,19 +156,4 @@
   height: 85vh;
  }
 
-.bg-save{
-  background : #6b1913;
-  padding: 5px; 
-  border-radius: 99px;
-  border: hidden;
-  color: #f7e5e4;
-}
-
-.bg-other{
-  background :  #f7e5e4;
-  padding: 5px; 
-  border-radius: 99px;
-  border: hidden;
-  color:  #6b1913;
-}
 
