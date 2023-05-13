@@ -4,18 +4,18 @@ import clsx from "clsx";
 import { FC, HTMLAttributes } from "react";
 import Rating from "./Rating";
 
-interface IngredientCardProps extends HTMLAttributes<HTMLDivElement> {
-    ingredients: any[];
+interface UtensilCardProps extends HTMLAttributes<HTMLDivElement> {
+    utensils: any[];
 }
 
-const IngredientCard: FC<IngredientCardProps> = ({ className , ingredients }) => {
+const UtensilCard: FC<UtensilCardProps> = ({ className , utensils }) => {
     return (
         <div className={clsx("overflow-hidden flex flex-col justify-center items-stretch", className)}>
-          <div className="font-bold m-5 text-xl self-start">Ingredients: </div>
+          <div className="font-bold m-5 text-xl self-start">Utensils: </div>
             <div className="flex flex-col items-center rounded-md">
-                <div className="grid gap-4 grid-cols-4 grid-rows-3 ">
-                    {ingredients.map((fact:any) => (
-                        <div key={fact.label} className=" w-48 h-72 m-3 bg-scondary rounded-xl flex flex-col items-stretch">
+                <div className="grid gap-4 grid-cols-4">
+                    {utensils.map((fact:any) => (
+                        <div key={fact.label} className=" w-48 h-64 m-3 bg-scondary rounded-xl flex flex-col items-stretch">
                             <div className="h-full w-full">
                                 <img className="object-cover rounded-tl-md rounded-tr-md w-48 h-48" src={fact.img} alt="" />
                             </div>
@@ -30,4 +30,4 @@ const IngredientCard: FC<IngredientCardProps> = ({ className , ingredients }) =>
     );
 }
 
-export default IngredientCard;
+export default UtensilCard;
