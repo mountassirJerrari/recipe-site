@@ -35,7 +35,7 @@ const Categories: FC<CategoriesProps> = ({className}) => {
     }
     ]
     return (
-         <div className={clsx("flex w-3/4 flex-col justify-center items-start",className)}>
+         <div className={clsx("flex w-3/4  flex-col justify-center items-start",className)}>
             <div className="font-bold mb-5 text-xl">popular Categories</div>
             <div className="flex justify-between items-center w-full ">
                 {categories.map((e)=>{

@@ -16,7 +16,7 @@ interface RecipeCardProps extends HTMLAttributes<HTMLDivElement> {
 
 const RecipeCard: FC<RecipeCardProps> = ({ className , name , description ,time , imageSrc }) => {
     return (
-        <div className={clsx("w-60 h-72 overflow-hidden m-4 bg-scondary rounded-xl flex flex-col items-stretch relative", className)}>
+        <div className={clsx("w-60 h-72 hover:-translate-y-1 transition-all overflow-hidden m-4 bg-scondary rounded-xl flex flex-col items-stretch relative", className)}>
             <AiFillHeart color="FF7E5A" size={20} className=" absolute top-2 right-2 "/>
 
             <div className="h-2/3 ">

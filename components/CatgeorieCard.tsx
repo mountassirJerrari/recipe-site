@@ -9,7 +9,7 @@ interface CatgeorieCardProps extends HTMLAttributes<HTMLDivElement>  {
 const CatgeorieCard: FC<CatgeorieCardProps> = ({name,imageSrc}) => {
     return ( 
         <div className=" flex flex-col justify-center items-center">
-            <div className="rounded-full overflow-hidden h-20 w-20 ">
+            <div className="rounded-full transition-transform duration-300 hover:shadow transform-gpu hover:scale-110 overflow-hidden h-20 w-20 ">
                 <img className=" object-cover  w-full h-full " src={imageSrc} alt="" />
             </div>
              <div className="font-medium ">{name}</div>
