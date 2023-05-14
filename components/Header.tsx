@@ -6,7 +6,7 @@ function Header() {
     return (
         <div className='h-14 z-30 w-full fixed top-0  bg-white p-5 flex justify-between items-center shadow-sm '>
             <div className="flex justify-center items-center ">
-                <img className="h-11" src="./img/logo.png" alt="Logo" />
+                <img className="h-11" src="./img/cuisine.png" alt="Logo" />
                 <div className="text-amber-800   text-3xl font-bold ml-2 ">kouzina</div>
             </div>
 
