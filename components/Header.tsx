@@ -56,19 +56,13 @@ function Header() {
 
 
 
-    return (
-<<<<<<< HEAD
-        <div className='h-14 z-30 w-full fixed top-0  bg-white p-5 flex justify-between items-center shadow-sm '>
-            <div className="flex justify-center items-center ">
-                <img className="h-11" src="./img/cuisine.png" alt="Logo" />
-=======
-        <div className='h-14 z-30 w-full fixed top-0  bg-white p-5 flex justify-between  items-center shadow-sm '>
+    return (     
+    <div className='h-14 z-30 w-full fixed top-0  bg-white p-5 flex justify-between  items-center shadow-sm '>
 
-            <Link href={'/'} className="flex justify-center items-center ">
-                <img className="h-11" src="/img/logo.png" alt="Logo" />
->>>>>>> main
-                <div className="text-amber-800   text-3xl font-bold ml-2 ">kouzina</div>
-            </Link>
+    <Link href={'/'} className="flex justify-center items-center ">
+        <img className="h-11" src="/img/cuisine.png" alt="Logo" />
+        <div className="text-amber-800   text-3xl font-bold ml-2 ">kouzina</div>
+    </Link>
 
 
             {
