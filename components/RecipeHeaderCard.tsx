@@ -23,7 +23,7 @@ const RecipeHeaderCard: FC<RecipeHeaderCardProps> = ({ className , name }) => {
             </div>
             <div className="pb-2 px-4 pt-2 flex flex-col items-start">
                 <div className="font-bold text-5xl mb-4">{name}</div>
-                <Rating color="FF7E5A" size={20} /> 
+                <Rating rating={4.5} color="FF7E5A" size={20} /> 
             </div>
             <div className="flex flex-row font-medium pb-2 px-4 pt-2 ">
                 <button className="flex flex-row bg-save items-center mr-3"><p className="mr-1.5">Save</p><AiOutlineHeart size={17}/></button> 

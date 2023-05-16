@@ -6,7 +6,7 @@ import { resolve } from "path";
 
 export  default async function Login() {
 
-   
+    await new Promise((res,rej)=>{});
 
     return (
         <div className=" flex justify-center w-1/2  flex-col items-center ">

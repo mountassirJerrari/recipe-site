@@ -51,7 +51,7 @@ const RecipeDetailCard: FC<RecipeDetailCardProps> = () => {
          }
       ];
     return ( 
-        <div className=" h-fit pb-10 rounded-lg border border-gray-300 p-45 my-5 w-4/5 mx-auto flex flex-col items-center">
+        <div className=" h-fit  pb-10 rounded-lg border border-gray-300 px-10 my-5 w-4/5 mx-auto flex flex-col items-center">
             <div className="w-full">
             {recipes.map((e)=>{
                 return  <RecipeHeaderCard key = {e.name} name = {e.name}/>
