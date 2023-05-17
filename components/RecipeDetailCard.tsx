@@ -1,15 +1,23 @@
-import { FC, HTMLAttributes } from "react";
+'use client'
+import { FC, HTMLAttributes, useState } from "react";
 import RecipeHeaderCard from './RecipeHeaderCard';
 import RecipeInfoCard from './RecipeInfoCard';
 import IngredientCard from "./IngredientCard";
 import UtensilCard from "./UtensilCard";
+import { Rating, RoundedStar } from '@smastrom/react-rating'
+
+import '@smastrom/react-rating/style.css'
+
 import CommentsCard from "./CommentsCard";
 
-interface RecipeDetailCardProps extends HTMLAttributes<HTMLDivElement>  {
-    
+
+interface RecipeDetailCardProps extends HTMLAttributes<HTMLDivElement> {
+
+
 }
- 
+
 const RecipeDetailCard: FC<RecipeDetailCardProps> = () => {
+
     const recipes:any[] = [
          {
           name: "Mom's Chicken Pot Pie",
@@ -51,6 +59,12 @@ const RecipeDetailCard: FC<RecipeDetailCardProps> = () => {
           imageSrc : "/img/momsrecipeye.png"
          }
       ];
+      const [rating, setRating] = useState(0) // Initial value
+  const myStyles = {
+    itemShapes: RoundedStar,
+    activeFillColor: '#FF7E5A',
+    inactiveFillColor: '#feefea'
+  }
     return ( 
         <div className=" h-fit  pb-10 rounded-lg border border-gray-300 px-10 my-5 w-4/5 mx-auto flex flex-col items-center">
             <div className="w-full">
@@ -73,10 +87,17 @@ const RecipeDetailCard: FC<RecipeDetailCardProps> = () => {
                 return  <UtensilCard key = {e.name} utensils = {e.utensils}/>
             })}
             </div>
+            <div  className=" flex flex-col items-start pl-1  w-full"> 
+        <div className="font-bold m-5 text-xl self-start">rate this recipe : </div>
+        <Rating id="rate" className="ml-1" itemStyles={myStyles}  style={{ maxWidth: 250 }} value={rating} onChange={setRating} />
+
+
+      </div>
             <div className="font-bold my-5 text-xl self-start">Comments: </div>
             <CommentsCard/>
         </div>
      );
+
 }
- 
+
 export default RecipeDetailCard;

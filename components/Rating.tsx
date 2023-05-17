@@ -1,3 +1,6 @@
+import { BsStar } from "react-icons/bs"; 
+import { BsStarFill } from "react-icons/bs"; 
+import { FaStarHalfAlt } from "react-icons/fa";
 import { BsStarHalf } from "react-icons/bs";
 import clsx from "clsx";
 import { FC, HTMLAttributes } from "react";
@@ -17,19 +20,22 @@ const Rating: FC<RatingProps> = ({ size, color, className, rating }) => {
 
   const renderStar = (index: number): JSX.Element => {
     if (index < roundedRating) {
-      return <AiFillStar color={color} size={size} />;
+      return <BsStarFill   color={color} size={size} />;
     } else if (index === roundedRating && hasHalfStar) {
-      return <BsStarHalf color={color} size={size} />;
+      return <FaStarHalfAlt color={color} size={size} />;
     } else {
-      return <AiOutlineStar color={color} size={size} />;
+      return <BsStar  color={color} size={size} />;
     }
   };
 
   return (
     <div className={clsx("flex justify-center items-center", className)}>
-      {Array.from({ length: 5 }).map((_, index) => (
-        <React.Fragment key={index}>{renderStar(index)}</React.Fragment>
-      ))}
+      {Array.from({ length: 5 }).map((_, index) => {
+
+
+        return <React.Fragment  key={index}>{renderStar(index)}</React.Fragment>
+      }
+      )}
     </div>
   );
 };
