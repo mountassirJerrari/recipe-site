@@ -38,7 +38,7 @@ const NutritionCard: FC<NutritionCardProps> = ({ className, nutritionFacts}) => 
                 <p className="text-sm font-medium leading-none">
                   {fact.label}
                 </p>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm ml-3 whitespace-nowrap text-muted-foreground">
                   {fact.value}
                 </p>
               </div>

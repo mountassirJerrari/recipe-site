@@ -11,21 +11,21 @@ interface RecipeInfoCardProps extends HTMLAttributes<HTMLDivElement> {
 
 const RecipeInfoCard: FC<RecipeInfoCardProps> = ({ className , imageSrc, nutritionfacts, infos }) => {
     return (
-        <div className={clsx("w-full h-full  flex flex-col items-stretch",className)}>
+        <div className={clsx("w-full h-full flex flex-col items-stretch",className)}>
             <div className="flex items-start w-full ">
-                <div className="mr-6 ml-2">
+                <div className="my-4">
                     <div className=" w-full h-96 rounded overflow-hidden">
                     <img className=" flex-1  w-full h-full object-cover " src={imageSrc} width={600} height={700} alt="" />
                     </div>
                     
                 </div>
-                <div className="ml-2 w-1/2 h-96 mr-5">
-                    <div className=" w-full overflow-scroll ">
-                        <NutritionCard nutritionFacts={nutritionfacts} />
+                <div className="m-4 w-1/2 h-96">
+                    <div className=" w-full  ">
+                        <NutritionCard className="w-auto" nutritionFacts={nutritionfacts} />
                     </div>
                 </div>
             </div>
-            <div className="mt-5 justify-center flex self-start flex-row w-7/8 items-center">
+            <div className="my-2 ml-16 justify-center flex self-start flex-row w-7/8 items-center">
                         {infos.map(e=>{
                         return (
                         <div key={e.label} className="flex flex-col justify-center align-middle items-stretch"> 

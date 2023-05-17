@@ -11,10 +11,10 @@ interface IngredientCardProps extends HTMLAttributes<HTMLDivElement> {
 const IngredientCard: FC<IngredientCardProps> = ({ className , ingredients }) => {
     return (
         <div className={clsx("flex w-full flex-col justify-center items-center", className)}>
-          <div className="font-bold m-5 text-xl self-start">Ingredients: </div>
-                <div className="w-full flex justify-center flex-wrap gap-4">
+          <div className="font-bold my-5 text-xl self-start">Ingredients: </div>
+                <div className="w-full flex justify-start flex-wrap gap-3">
                     {ingredients.map((fact:any) => (
-                        <div key={fact.label} className="w-36 h-52  overflow-hidden  bg-scondary rounded-xl flex flex-col items-stretch relative">
+                        <div key={fact.label} className="w-36 h-52 overflow-hidden bg-scondary rounded-xl flex flex-col items-stretch relative">
                             <div className="h-2/3">
                                 <img className="object-cover w-36 h-32" src={fact.img} alt="" />
                             </div>

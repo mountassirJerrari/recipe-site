@@ -3,6 +3,7 @@ import RecipeHeaderCard from './RecipeHeaderCard';
 import RecipeInfoCard from './RecipeInfoCard';
 import IngredientCard from "./IngredientCard";
 import UtensilCard from "./UtensilCard";
+import CommentsCard from "./CommentsCard";
 
 interface RecipeDetailCardProps extends HTMLAttributes<HTMLDivElement>  {
     
@@ -72,6 +73,8 @@ const RecipeDetailCard: FC<RecipeDetailCardProps> = () => {
                 return  <UtensilCard key = {e.name} utensils = {e.utensils}/>
             })}
             </div>
+            <div className="font-bold my-5 text-xl self-start">Comments: </div>
+            <CommentsCard/>
         </div>
      );
 }

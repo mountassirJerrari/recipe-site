@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import clsx from "clsx";
 import { FunctionComponent, HTMLAttributes } from "react";
 import Collection from "./Collection";
