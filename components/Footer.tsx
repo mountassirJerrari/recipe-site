@@ -68,7 +68,7 @@ const Footer: FC<FooterProps> = () => {
             </div>
             </div>
         </div>
-        <div className="flex text-white "> Made with  <p className="font-semibold mx-2"> Love </p> by <p className="font-semibold  mx-2">MOEEN Technologies</p></div>
+        <div className="flex text-white "> Made with  <p className="font-semibold mx-2"> Love </p> by <p className="font-semibold  mx-2">MOENN Technologies</p></div>
     </div>);
 }
 

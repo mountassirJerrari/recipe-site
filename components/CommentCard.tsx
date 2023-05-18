@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 import clsx from "clsx";
 import { FC, HTMLAttributes } from "react";

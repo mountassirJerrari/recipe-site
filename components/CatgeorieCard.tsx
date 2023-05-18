@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FC, HTMLAttributes } from "react";
 
 interface CatgeorieCardProps extends HTMLAttributes<HTMLDivElement>  {
@@ -8,12 +9,12 @@ interface CatgeorieCardProps extends HTMLAttributes<HTMLDivElement>  {
  
 const CatgeorieCard: FC<CatgeorieCardProps> = ({name,imageSrc}) => {
     return ( 
-        <div className=" flex flex-col justify-center items-center">
+        <Link href={""} className=" flex flex-col justify-center items-center">
             <div className="rounded-full transition-transform duration-300 hover:shadow transform-gpu hover:scale-110 overflow-hidden h-20 w-20 ">
                 <img className=" object-cover  w-full h-full " src={imageSrc} alt="" />
             </div>
              <div className="font-medium ">{name}</div>
-        </div>
+        </Link>
      );
 }
  
