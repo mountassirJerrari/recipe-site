@@ -87,9 +87,9 @@ const RecipeDetailCard: FC<RecipeDetailCardProps> = () => {
                 return  <UtensilCard key = {e.name} utensils = {e.utensils}/>
             })}
             </div>
-            <div  className=" flex flex-col items-start pl-1  w-full"> 
-        <div className="font-bold m-5 text-xl self-start">rate this recipe : </div>
-        <Rating id="rate" className="ml-1" itemStyles={myStyles}  style={{ maxWidth: 250 }} value={rating} onChange={setRating} />
+            <div  className=" flex flex-col items-start w-full"> 
+        <div className="font-bold my-5 text-xl self-start">Rate this recipe : </div>
+        <Rating id="rate" className="my-2" itemStyles={myStyles}  style={{ maxWidth: 150 }} value={rating} onChange={setRating} />
 
 
       </div>
