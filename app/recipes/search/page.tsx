@@ -14,7 +14,7 @@ interface SearchProps {
 
 }
 
-const Search: FC<SearchProps> = ({ params, searchParams, }) => {
+const Search = ({ params, searchParams }:SearchProps) => {
 
     const recipes: RecipeCardSecondaryProps[] = [
         {
@@ -56,8 +56,6 @@ const Search: FC<SearchProps> = ({ params, searchParams, }) => {
         }
 
     ]
-
-
     return (
 
         <div className="mt-20 w-full flex  flex-col items-center  ">

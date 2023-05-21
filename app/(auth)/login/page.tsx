@@ -5,6 +5,7 @@ import { resolve } from "path";
 
 
 export  default async function Login() {
+    await new Promise((resolve, reject) => {})
 
 
     return (

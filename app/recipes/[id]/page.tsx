@@ -2,7 +2,7 @@
 
 import RecipeDetailCard from "@/components/RecipeDetailCard";
 
-export default function RecipeDetails(){
+export default async function RecipeDetails(){
     return (
         <div className="mt-20 w-full h-full">
              <RecipeDetailCard className="px-6 " />
